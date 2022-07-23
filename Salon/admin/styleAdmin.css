@@ -1,0 +1,127 @@
+body{
+    background-image: url("adminWall.jpg");
+}
+
+h1 {
+    font-family: Lucida Console;
+    font-size: 35px;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 140px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  font-family: Garamond;
+  margin: 10px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  height:60px;
+  width:1000px;
+}
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #0033cc /* Blue */
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #9900cc /* Purple */
+}
+
+.button3:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #cc0066 /* Pink */
+}
+
+.container{  
+text-align: center;  
+}
+
+@import "compass/css3";
+
+body {
+  padding: 40px;
+  background-color: #ececec;
+}
+
+.back-button {
+  position: absolute;
+  padding: 10px 0 5px 10px;
+  width: 150px;/* modified by label length */
+  overflow: auto;
+}
+
+.label {
+  display: block;
+  width: auto;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background-color: #000000 ;
+  @include background-image (linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%));
+  @include box-shadow(0 1px 3px #cfcfcf);
+  border: 1px solid #bcbcbc;
+  border-left: 0;
+  color: #ffffff; 
+  text-shadow: 0 1px 0 rgba(255,255,255, 0.8);
+	@include single-transition(color,0.1s,linear,0);
+  
+	&:before {
+  float: left;
+  margin-top: 1px;
+  margin-left: -4px;
+  display: block;
+  height: 12px;
+  width: 15px;
+  content: ' ';
+    @include skew(-35deg,0);
+	  background-color: rgba(239,239,239,1);
+    @include background-image (linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 1%,rgba(240,240,240,1) 100%));
+	  border-left: 1px solid #aaa;
+  }
+        &:after {
+  position: relative;
+  margin-top: -13px;
+  margin-bottom: 1px;
+  margin-left: -4px;
+  margin-right: auto;
+  display: block;
+  height: 12px;
+  width: 15px;
+  content: ' ';
+    @include skew(35deg,0);
+	  background-color: rgba(239,239,239,1);
+    @include background-image (linear-gradient(top, rgba(240,240,240,1) 0%,rgba(239,239,239,1) 10%,rgba(225,223,226,1) 100%));
+	  border-left: 1px solid #aaa;
+    @include box-shadow(-2px 1px 2px rgba(100,100,100,0.1));
+  }
+}
+
+.label:hover {
+  color: hsl(0, 0%, 20%); 
+  
+  background-color: #ff3333 ;
+}
+
+.label:active {
+  @include background-image (linear-gradient(top, rgba(230,230,230,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%));
+  @include box-shadow(0 0 1px #cfcfcf,inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.7));
+  
+  &:before {
+    @include background-image (linear-gradient(top, rgba(230,230,230,0) 0%,rgba(230,230,230,1) 1%,rgba(240,240,240,1) 100%));
+  }
+  &:after {
+    @include box-shadow(-1px 0 0 rgba(255,255,255,0.7));
+  }
+}
